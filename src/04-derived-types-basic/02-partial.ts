@@ -4,7 +4,7 @@ interface IUser {
   createdAt: Date
 }
 
-const updateUser = (id: string, user: Partial<IUser>) => {
+const updateUser = (id: string, user: IUser) => {
   // ... call some PATCH API
 }
 

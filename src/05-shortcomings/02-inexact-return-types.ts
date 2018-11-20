@@ -3,20 +3,24 @@ interface IUserProfile {
   lastName: string
 }
 
+const myFunction = (profile: IUserProfile): IUserProfile => {
+  return {
+    ...profile,
+  }
+}
+
+myFunction({ firstName: 'Jon', lastName: 'Doe' })
+
+
+
+
+
 type MyFunction = (profile: IUserProfile) => IUserProfile
 
-const myFunction: MyFunction = (profile) => {
+const mySecondFunction: MyFunction = (profile) => {
     return {
       ...profile,
-      age: 21,
     }
 }
 
-myFunction({ firstName: 'Jon', lastName: 'Doe', age: 21 })
-
-const mySecondFunction = (profile: IUserProfile): IUserProfile => {
-  return {
-    ...profile,
-    age: 21,
-  }
-}
+mySecondFunction({ firstName: 'Jon', lastName: 'Doe' })

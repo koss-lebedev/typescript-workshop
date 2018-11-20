@@ -8,7 +8,7 @@ interface IOuterProps {
 
 const MyComponent: SFC<IOuterProps> = ({ content }) => (
   <div>
-    {typeof content === 'string' ? content : content()}
+    {}
   </div>
 )
 

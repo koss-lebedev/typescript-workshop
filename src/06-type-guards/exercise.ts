@@ -20,9 +20,9 @@ const addCreditCard = (creditCard: ICreditCard) => ({
   }
 })
 
-type Action =
-  | ReturnType<typeof loadCreditCards>
-  | ReturnType<typeof addCreditCard>
+// TODO: define Action type
+
+type Action = never
 
 const reducer = (
   state: ReadonlyArray<ICreditCard>,

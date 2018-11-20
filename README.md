@@ -1,13 +1,17 @@
 # TypeScript workshop
 
-0. Intro (TSLint and type-check script)
+0. Intro
+   * Casting
+   * Optional and default params
+   * Definitely not null
+   * Generics
 1. Type aliases vs interfaces
 2. Enums vs string literals
 3. React components
    * functional components
    * stateful components
 4. Derived types basics
-   * ReadOnly (properties & objects & arrays)
+   * ReadOnly
    * Partial
    * ReturnType
 5. Shortcomings  

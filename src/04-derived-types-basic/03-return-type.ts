@@ -10,8 +10,6 @@ const addTodo = (item: ITodoItem) => ({
   },
 })
 
-type TodoAction = ReturnType<typeof addTodo>
-
 export const reducer = (state: ReadonlyArray<ITodoItem>, action: TodoAction) => {
 
   return [...state, action.payload.item]

@@ -5,9 +5,10 @@ interface IPollingOptions<Props> {
   handler: (props: Props) => void
 }
 
-const withPolling = <OuterProps extends {}>({ interval, handler }: IPollingOptions<OuterProps>) =>
+const withPolling = <OuterProps>({ interval, handler }: IPollingOptions<OuterProps>) =>
   (ComposedComponent: ComponentType<OuterProps>) => {
     class WithPolling extends Component<OuterProps> {
+
       pollingId: NodeJS.Timer
 
       componentDidMount() {
@@ -20,9 +21,9 @@ const withPolling = <OuterProps extends {}>({ interval, handler }: IPollingOptio
         clearInterval(this.pollingId)
       }
 
-      render() {
-        return <ComposedComponent {...this.props} />
-      }
+      // render() {
+      //   return <ComposedComponent {...this.props} />
+      // }
     }
 
     return WithPolling

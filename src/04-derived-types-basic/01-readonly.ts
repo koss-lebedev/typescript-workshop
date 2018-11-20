@@ -5,14 +5,17 @@ interface IComment {
 
 interface IArticle {
   title: string
-  publishedAt: Date
   content: string
   author: string
-  comments: ReadonlyArray<IComment>
+  comments: IComment[]
+  meta: {
+    publishedAt: Date
+  }
 }
 
-export const processArticle = (article: Readonly<IArticle>) => {
+export const processArticle = (article: IArticle) => {
   article.author = 'Jon'
+  article.meta.publishedAt = new Date()
   article.comments.push({ id: '5', content: 'You suck!'})
 
   // do some processing...

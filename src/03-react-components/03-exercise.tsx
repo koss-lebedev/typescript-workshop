@@ -1,13 +1,10 @@
-import React, { SFC, Fragment } from 'react'
+import React, { Fragment } from 'react'
 
 const SIZES = { small: 24, medium: 48, large: 96 }
 
-interface IAvatarProps {
-  size: 'small' | 'medium' | 'large'
-  src: string
-}
+// TODO: type Avatar component
 
-const Avatar: SFC<IAvatarProps> = ({ src, size }) => (
+const Avatar = ({ src, size }) => (
   <img
     src={src}
     width={SIZES[size]}

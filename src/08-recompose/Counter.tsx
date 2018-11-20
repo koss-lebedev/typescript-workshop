@@ -5,19 +5,7 @@ interface IOuterProps {
   initialValue: number
 }
 
-interface IWithState {
-  value: number
-  setValue: (value: number) => void
-}
-
-interface IHandlers {
-  handleIncrement: () => void
-  handleDecrement: () => void
-}
-
-type InnerProps = IOuterProps & IWithState & IHandlers
-
-const Counter: SFC<InnerProps> = ({ value, handleIncrement, handleDecrement }) => (
+const Counter: SFC = ({ value, handleIncrement, handleDecrement }) => (
   <div>
     <button onClick={handleIncrement}>+</button>
     <span>{value}</span>
@@ -25,9 +13,9 @@ const Counter: SFC<InnerProps> = ({ value, handleIncrement, handleDecrement }) =
   </div>
 )
 
-export default compose<InnerProps, IOuterProps>(
+export default compose(
   withState('value', 'setValue', (props: IOuterProps) => props.initialValue),
-  withHandlers<InnerProps, IHandlers>({
+  withHandlers({
     handleIncrement: ({ value, setValue }) => () => {
       setValue(value + 1)
     },

@@ -23,7 +23,7 @@
         "esSpecCompliant": true
       }
     ],
-    "max-classes-per-file": false,
+    "max-classes-per-file": false
   },
   "rulesDirectory": []
 }

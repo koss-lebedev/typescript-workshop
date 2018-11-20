@@ -1,11 +1,11 @@
-import React, { SFC } from 'react'
+import React from 'react'
 
 interface IOuterProps {
   name: string
   age: number
 }
 
-const UserInfo: SFC<IOuterProps> = ({ name, age }) => (
+const UserInfo = ({ name, age }) => (
   <div>
     <h1>{name}</h1>
     <input type="number" value={age} />

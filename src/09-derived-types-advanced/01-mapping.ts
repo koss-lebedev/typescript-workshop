@@ -1,7 +1,3 @@
-type Optional<T> = {
-  [P in keyof T]?: T[P]
-}
-
 /* TESTING */
 
 interface IBook {

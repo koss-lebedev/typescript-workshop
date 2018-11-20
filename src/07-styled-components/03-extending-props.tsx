@@ -1,6 +1,6 @@
-import React, { InputHTMLAttributes, SFC } from 'react'
+import React, { SFC } from 'react'
 
-interface IOuterProps extends InputHTMLAttributes<HTMLInputElement> {
+interface IOuterProps {
   label: string
 }
 
@@ -16,7 +16,6 @@ const App = () => (
     <h1>Sign in</h1>
     <LabeledInput
       label="Your email"
-      onChange={event => console.log(event.target.value)}
     />
   </div>
 )

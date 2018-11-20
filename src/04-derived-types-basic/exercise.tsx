@@ -7,7 +7,9 @@ const mapStateToProps = (state: IState) => ({
   fullName: `${state.user.firstName} ${state.user.lastName}`,
 })
 
-type InnerProps = Readonly<ReturnType<typeof mapStateToProps>>
+// TODO: Define InnerProps type
+
+type InnerProps = never
 
 const UserProfile: SFC<InnerProps> = ({ username, fullName }) => (
   <div>

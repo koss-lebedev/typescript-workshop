@@ -1,15 +1,10 @@
 import styled from 'styled-components'
 
-export const Container = styled.div<{ isVisible: boolean }>`
+export const Container = styled.div`
   display: ${props => props.isVisible ? 'block' : 'none'};
 `
 
-interface IAvatarProps {
-  src: string
-  size: number
-}
-
-export const Avatar = styled.div<IAvatarProps>`
+export const Avatar = styled.div`
   background-image: url(${props => props.src});
   background-repeat: no-repeat;
   background-size: cover;
